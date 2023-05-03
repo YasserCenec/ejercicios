@@ -3,24 +3,24 @@ body {
     transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-.container {
+.clase {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
 }
 
-.light-theme {
-    background-color: #ffffff;
-    color: #000000;
+.claro {
+    background-color: white;
+    color: black;
 }
 
-.dark-theme {
-    background-color: #000000;
-    color: #ffffff;
+.oscuro {
+    background-color: black;
+    color: wheat;
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: red;
     border: none;
     color: white;
     padding: 10px 20px;
@@ -35,5 +35,5 @@ button {
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: plum;
 }
