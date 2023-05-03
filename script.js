@@ -22,13 +22,13 @@ for (let i = 0; i < celdas.length; i++) {
   celdas[i].addEventListener('mouseleave', handleMouseLeave);
 }
 
-let jugadorActual = '★';
+let jugadorActual = '✘';
 
 function handleClick(event) {
   if (event.target.textContent === '') {
     event.target.textContent = jugadorActual;
     event.target.style.color = 'white';
-    jugadorActual = jugadorActual === '★' ? '○' : '★';
+    jugadorActual = jugadorActual === '✘' ? '〇' : '✘';
     verificarGanador();
   }
 }
@@ -48,8 +48,14 @@ function verificarGanador() {
   for (const condicion of condicionesGanadoras) {
     const [a, b, c] = condicion;
     if (valoresCeldas[a] && valoresCeldas[a] === valoresCeldas[b] && valoresCeldas[a] === valoresCeldas[c]) {
-      alert(`¡Ganó el jugador ${valoresCeldas[a]}!`);
+      alert(`¡El jugador ${valoresCeldas[a]} ganó la partida!`);
       break;
     }
   }
+
+  document.getElementById('mas-informacion').addEventListener('click', function (event) {
+    event.preventDefault();
+    alert('Yasser, 1º DAM\nTA-TE-TI');
+  });
+
 }
